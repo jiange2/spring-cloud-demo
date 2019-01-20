@@ -1,19 +1,21 @@
-package com.example.application1;
+package com.example.ribbon;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration;
 import org.springframework.web.client.RestTemplate;
 
+@EnableDiscoveryClient
 @SpringBootApplication
-@EnableEurekaClient
-public class Application1Application {
+public class RibbonApplication {
+
+
 
 
     public static void main(String[] args) {
-        SpringApplication.run(Application1Application.class, args);
+        SpringApplication.run(RibbonApplication.class, args);
     }
 
 }
