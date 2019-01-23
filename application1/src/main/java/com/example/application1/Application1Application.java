@@ -18,3 +18,4 @@ public class Application1Application {
 
 }
 
+//java -Dspring.profiles.active=peer1 application

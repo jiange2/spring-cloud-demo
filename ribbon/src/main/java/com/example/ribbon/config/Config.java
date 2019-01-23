@@ -8,11 +8,14 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class Config {
 
-    @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate(){
-        return new RestTemplate();
-    };
-
-
+    /**
+     *  <bean class="org.springframework.web.client">
+     *      <qualifier value=""/>
+     *  </bean>
+     */
+//    @Bean
+//    @LoadBalanced
+//    public RestTemplate restTemplate(){
+//        return new RestTemplate();
+//    };
 }
