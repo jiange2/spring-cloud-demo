@@ -1,0 +1,15 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9001/eureka/
+spring:
+  application:
+    name: zuul
+server:
+  port: 9031
+zuul:
+  routers:
+    hi:
+      path: /hi-service/**
+      url: http://localhost:10021,http://localhost:10021
+      #serviceId: hi-service
