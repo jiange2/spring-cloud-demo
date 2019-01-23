@@ -19,6 +19,7 @@ public class HelloApplication {
 
     @GetMapping("/hello")
     public String hello(){
+        System.out.println("hello");
         return String.format("Hello, I am from %s",serverPort);
     }
 
