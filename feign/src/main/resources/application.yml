@@ -7,3 +7,6 @@ spring:
     name: feign
 server:
   port: 9021
+feign:
+  hystrix:
+    enabled: true

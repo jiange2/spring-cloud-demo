@@ -8,8 +8,26 @@ spring:
 server:
   port: 9031
 zuul:
-  routers:
-    hi:
+  routes:
+    hi-service:
       path: /hi-service/**
-      url: http://localhost:10021,http://localhost:10021
-      #serviceId: hi-service
+      #url: http://localhost:10021/
+      serviceId: hi-service
+  decode-url: false
+  #ignored-patterns: /hello-service/**
+---
+spring:
+  profiles: peer1
+server:
+  port: 9031
+---
+spring:
+  profiles: peer2
+server:
+  port: 9032
+---
+spring:
+  profiles: peer3
+server:
+  port: 9033
+---

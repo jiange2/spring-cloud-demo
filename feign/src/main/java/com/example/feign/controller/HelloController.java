@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController{
 
-    @Autowired
-    private HelloService helloService;
-
-    @GetMapping
-    public String hello(){
-        return helloService.hello();
-    }
+//    @Autowired
+//    private HelloService helloService;
+//
+//    @GetMapping
+//    public String hello(){
+//        return helloService.hello();
+//    }
 
 }
